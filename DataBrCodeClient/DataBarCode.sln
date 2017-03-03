@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBarCode", "DataBarCode\DataBarCode.csproj", "{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBrUpdater", "DataBrUpdater\DataBrUpdater.csproj", "{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{80ABAA34-5F1D-489E-A724-70385907205B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		IntegrationTestDebug|Any CPU = IntegrationTestDebug|Any CPU
+		IntegrationTestRelease|Any CPU = IntegrationTestRelease|Any CPU
+		NDoc|Any CPU = NDoc|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.IntegrationTestDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.IntegrationTestDebug|Any CPU.Build.0 = Debug|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.IntegrationTestDebug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.IntegrationTestRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.IntegrationTestRelease|Any CPU.Build.0 = Release|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.IntegrationTestRelease|Any CPU.Deploy.0 = Release|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.NDoc|Any CPU.ActiveCfg = Release|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.NDoc|Any CPU.Build.0 = Release|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.NDoc|Any CPU.Deploy.0 = Release|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.IntegrationTestDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.IntegrationTestDebug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.IntegrationTestDebug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.IntegrationTestRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.IntegrationTestRelease|Any CPU.Build.0 = Release|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.IntegrationTestRelease|Any CPU.Deploy.0 = Release|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.NDoc|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.NDoc|Any CPU.Build.0 = Release|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.NDoc|Any CPU.Deploy.0 = Release|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B25A2B-AF0B-497C-AE46-EB06D757CFDD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

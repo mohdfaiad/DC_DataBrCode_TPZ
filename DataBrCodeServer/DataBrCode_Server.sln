@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBrCode_View", "DataBrCode_View\DataBrCode_View.csproj", "{ED6F5119-0776-4ECE-9193-DDD3120FFB75}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13667859-AFBE-48E5-B614-CA7873AC0DEB} = {13667859-AFBE-48E5-B614-CA7873AC0DEB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppDataBrCode", "WebAppDataBrCode\WebAppDataBrCode.csproj", "{13667859-AFBE-48E5-B614-CA7873AC0DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppDataUpdater", "WebAppDataUpdater\WebAppDataUpdater.csproj", "{DA8CBA4A-9756-40E3-893C-052BD1FA792A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED6F5119-0776-4ECE-9193-DDD3120FFB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED6F5119-0776-4ECE-9193-DDD3120FFB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED6F5119-0776-4ECE-9193-DDD3120FFB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED6F5119-0776-4ECE-9193-DDD3120FFB75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13667859-AFBE-48E5-B614-CA7873AC0DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13667859-AFBE-48E5-B614-CA7873AC0DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13667859-AFBE-48E5-B614-CA7873AC0DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13667859-AFBE-48E5-B614-CA7873AC0DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8CBA4A-9756-40E3-893C-052BD1FA792A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8CBA4A-9756-40E3-893C-052BD1FA792A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8CBA4A-9756-40E3-893C-052BD1FA792A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8CBA4A-9756-40E3-893C-052BD1FA792A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal

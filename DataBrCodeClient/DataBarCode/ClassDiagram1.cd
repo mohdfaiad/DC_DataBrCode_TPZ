@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DataBarCode.BufferToBD" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADACAAAQAAABAAAEAAAAAAAEEAQIAAAAAQgACAAAAA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.BufferOperation" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAEAAAAAgAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.BufferOper_POST_EU_LIST_Warehouse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAQBAAAAA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataBarCode.BufferOper_POST_EU_LIST_TASKMOVE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAQBAAAAA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataBarCode.BufferOper_POST_EU_IN_AGR" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataBarCode.BufferOper_POST_EU_LIST_SHIP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataBarCode.BufferOper_POST_EU_LIST_RZDN_AGR" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataBarCode.BufferOper_POST_EU_LIST_INVERT_MX" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAABIAAAAAABAAAAA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataBarCode.CBrHeader" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEgCAAAAAAAAAAACAgASAQAAAAA=</HashCode>
+      <FileName>CBrHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.CLog" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAARAAEAAAAABBAAAAAAAAgAAAAAAAAACABBAAA=</HashCode>
+      <FileName>CLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.DataScales" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUBKAClACAAgBAAgC7AAAoSgAAAUAAAgAIQAADDBiQ=</HashCode>
+      <FileName>DataScales.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.DevMenu" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAQACBACBAAAACAAAACAgAAFAACAAQAEABAgAA=</HashCode>
+      <FileName>DevMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.EU_Action" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABGACgACAAAEAAAGSAAAACgQAAEAAAAAIAAADAACA=</HashCode>
+      <FileName>EU_Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.EUSearch" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkCEgAAACAAAAAEAIDAAAECgAICEIA+AgACAABgAAQ=</HashCode>
+      <FileName>EUSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.EUShip" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAyBOAAEACAAAAAEoATAAAACQAAEMYIAAgAgAAJAAIA=</HashCode>
+      <FileName>EUShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.HardInfo" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAABIAAACAAAACAAAAFAAAAAAAAABAAQA=</HashCode>
+      <FileName>HardInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.InventTaskList" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgwRGgAABCEAAAAAAACAAAAqAAAAcIA4AhAAAABAgIA=</HashCode>
+      <FileName>InventTaskList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.InventTaskMX" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIwRKgAAACACAAQAgADAACAKAIAAMIA6AhACAABAgIA=</HashCode>
+      <FileName>InventTaskMX.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.LogUpload" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAAACAAABAAAACAAABCAAAAEAAIQAAAEABAAAA=</HashCode>
+      <FileName>LogUpload.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.MainWindow" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAQIAgACgAABABAATAAAACAAAAGAAAAQAAAABAAAA=</HashCode>
+      <FileName>MainWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.MenuAgr" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQBCAAAACAAQBABCCKBAIgCAAAAMAAAAoAAACJCKAA=</HashCode>
+      <FileName>MenuAgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.MenuWereHouse" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYDKAAAAKAAABAAAECACAACgAAAMgAgACAAAQhAAAA=</HashCode>
+      <FileName>MenuWereHouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.Program" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.QueueTask" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwRGgAAECACAAAAAADAAAAKAAAAMIA+AhAAAABAgMA=</HashCode>
+      <FileName>QueueTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.QueueTaskEU" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwBGgAEACAGEAAEgwSAAAIigEIAMII+ApAgAAJAAAA=</HashCode>
+      <FileName>QueueTaskEU.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.ScanTest" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKIAAACAAABAAgACAAAACAAAAFgEAAABgAABAAAQ=</HashCode>
+      <FileName>ScanTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.ScanWareHouse" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AESHKAAIACAAAACAgECAAACCgAAAMAAAAiAAAEBAAAA=</HashCode>
+      <FileName>ScanWareHouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.Settings" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABGAAAAAAIAIAAAAAAEAAAAAABAAAAAAABAAAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.SettingsTsd" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAgIAAAAAAAAAAAAAAAAAAAAAhAAAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.SqLiteDB" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAEAAAAAAAAAAAAAAACEAAAAAAAQAAAAAACAAAAA=</HashCode>
+      <FileName>SqLiteDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.SqlLiteQuery" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAACAAAADAAIAABAAAICAAgAAAAAAIIAAAACAAAAY=</HashCode>
+      <FileName>SqLiteDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.StartMenu" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIkFKAAgEKAIgFEAoASAIAACgAIgEUAAJQAQRAByhgU=</HashCode>
+      <FileName>StartMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.StatusBar" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StatusBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.TestCloneBD" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACCAgAAIAATAAAEigAAAkAAAAQAAAgQBAAA=</HashCode>
+      <FileName>TestCloneBD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.WarehousePost" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkBOgBEACFEAAIEiASAAEIyhgIAFIA8EgAAAALAAIE=</HashCode>
+      <FileName>WarehousePost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.WarehouseSel" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gJgBKAACBCCAgBAAgGTAAAAGgAAAEAAAAgIAAABAAAU=</HashCode>
+      <FileName>WarehouseSel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.WareHouseView" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBMgAAECAAAAAEAACAEEACAAAAMAA8AgAAAABAAAA=</HashCode>
+      <FileName>WareHouseView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GridSample.DataGridEnableEventArgs" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAIAAAABAAAAAAAAAAgQAAAAAAAAACAA=</HashCode>
+      <FileName>ColumnStyle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GridSample.ColumnStyle" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAKAAA=</HashCode>
+      <FileName>ColumnStyle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBarCode.Properties.Resources" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAEAAAAQAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DataBarCode.IBufferOperationOracle" Collapsed="true">
+    <Position X="8" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DataBarCode.TypeClassBuffer" Collapsed="true">
+    <Position X="2.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAEAAAAAAABAAIAAAAICAAAAQA=</HashCode>
+      <FileName>BufferToBD.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DataBarCode.ListScanOperation" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAACAAAAAECAAAAAAAAIAAAAACAAAAA=</HashCode>
+      <FileName>StartMenu.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="GridSample.CheckCellEventHandler" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ColumnStyle.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

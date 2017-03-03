@@ -1,0 +1,394 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B129E6A7-DCCC-41A0-A80C-6DCF497F2AF3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataBarCode</RootNamespace>
+    <AssemblyName>DataBarCode</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>DataBarCode</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Intermec.DataCollection.CF3.5, Version=5.10.2.116, Culture=neutral, PublicKeyToken=acd169b56b6148ba, processorArchitecture=MSIL" />
+    <Reference Include="Ionic.Zip.CF, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataBrUpdater\Ionic.Zip.CF.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenNETCF, Version=2.3.12317.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\doc\ЦГП\WindowsMobile_6-5\OpenNETCF_DLL\OpenNETCF.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.Net, Version=2.3.12317.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\doc\ЦГП\WindowsMobile_6-5\OpenNETCF_DLL\OpenNETCF.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.WindowsCE, Version=2.3.12317.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\doc\ЦГП\WindowsMobile_6-5\OpenNETCF_DLL\OpenNETCF.WindowsCE.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.WindowsMobile, Version=2.3.12317.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\doc\ЦГП\WindowsMobile_6-5\OpenNETCF_DLL\OpenNETCF.WindowsMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.103.0, Culture=neutral, PublicKeyToken=1fdb50b1b62b4c84, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Messaging">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BufferToBD.cs" />
+    <Compile Include="CBrHeader.cs" />
+    <Compile Include="CLog.cs" />
+    <Compile Include="ColumnStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataScales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataScales.Designer.cs">
+      <DependentUpon>DataScales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EUSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EUSearch.Designer.cs">
+      <DependentUpon>EUSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EUSearch_Rulon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EUSearch_Rulon.Designer.cs">
+      <DependentUpon>EUSearch_Rulon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EUSearch_SRZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EUSearch_SRZ.Designer.cs">
+      <DependentUpon>EUSearch_SRZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EUSearch_UGP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EUSearch_UGP.Designer.cs">
+      <DependentUpon>EUSearch_UGP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EUShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EUShip.Designer.cs">
+      <DependentUpon>EUShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EU_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EU_Action.Designer.cs">
+      <DependentUpon>EU_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventTaskList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventTaskList.Designer.cs">
+      <DependentUpon>InventTaskList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventTaskMX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventTaskMX.Designer.cs">
+      <DependentUpon>InventTaskMX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListMxByRZDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListMxByRZDN.Designer.cs">
+      <DependentUpon>ListMxByRZDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogUpload.Designer.cs">
+      <DependentUpon>LogUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAgr.Designer.cs">
+      <DependentUpon>MenuAgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuWereHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuWereHouse.Designer.cs">
+      <DependentUpon>MenuWereHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DataScales.resx">
+      <DependentUpon>DataScales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EUSearch.resx">
+      <DependentUpon>EUSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EUSearch_Rulon.resx">
+      <DependentUpon>EUSearch_Rulon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EUSearch_SRZ.resx">
+      <DependentUpon>EUSearch_SRZ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EUSearch_UGP.resx">
+      <DependentUpon>EUSearch_UGP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EUShip.resx">
+      <DependentUpon>EUShip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EU_Action.resx">
+      <DependentUpon>EU_Action.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventTaskList.resx">
+      <DependentUpon>InventTaskList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventTaskMX.resx">
+      <DependentUpon>InventTaskMX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListMxByRZDN.resx">
+      <DependentUpon>ListMxByRZDN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogUpload.resx">
+      <DependentUpon>LogUpload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAgr.resx">
+      <DependentUpon>MenuAgr.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuWereHouse.resx">
+      <DependentUpon>MenuWereHouse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueTask.resx">
+      <DependentUpon>QueueTask.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueTaskEU.resx">
+      <DependentUpon>QueueTaskEU.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanTest.resx">
+      <DependentUpon>ScanTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanWareHouse.resx">
+      <DependentUpon>ScanWareHouse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartMenu.resx">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehousePost.resx">
+      <DependentUpon>WarehousePost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseSel.resx">
+      <DependentUpon>WarehouseSel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WareHouseView.resx">
+      <DependentUpon>WareHouseView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WiFiTest.resx">
+      <DependentUpon>WiFiTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QueueTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueueTask.Designer.cs">
+      <DependentUpon>QueueTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueueTaskEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueueTaskEU.Designer.cs">
+      <DependentUpon>QueueTaskEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanTest.Designer.cs">
+      <DependentUpon>ScanTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanWareHouse.Designer.cs">
+      <DependentUpon>ScanWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SqLiteDB.cs" />
+    <Compile Include="StartMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartMenu.Designer.cs">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusBar.cs" />
+    <Compile Include="Validate.cs" />
+    <Compile Include="WarehousePost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehousePost.Designer.cs">
+      <DependentUpon>WarehousePost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseSel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseSel.Designer.cs">
+      <DependentUpon>WarehouseSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WareHouseView.Designer.cs">
+      <DependentUpon>WareHouseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WiFiTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WiFiTest.Designer.cs">
+      <DependentUpon>WiFiTest.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.80.15:4607/WebSDataBrCode.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://192.168.80.15:4607/WebSDataBrCode.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WebReference\WebSDataBrCode.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\WebSDataBrCode.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="icon\" />
+    <Folder Include="sound\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

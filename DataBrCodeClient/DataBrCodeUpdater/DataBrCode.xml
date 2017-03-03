@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataBrCode>
+  <Emulator>False</Emulator>
+  <AdressAppServer>http://10.96.9.3:8081/WebSDataBrCode.asmx</AdressAppServer>
+   <AdressAppServerUpdate>http://10.96.9.3:8082/WebSDataBrUpdater.asmx</AdressAppServerUpdate>
+  <DayToSaveLog>10</DayToSaveLog>
+  <DataScalesServerIp>10.96.9.2</DataScalesServerIp>
+  <DataScalesServerPort>13000</DataScalesServerPort>
+  <DataScalesServerTime>400</DataScalesServerTime>
+</DataBrCode>

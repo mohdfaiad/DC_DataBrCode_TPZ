@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="WebSDataBrUpdater" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="WebSDataBrUpdater" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="WebSDataBrUpdater">
+      <s:element name="System_Get_Release">
+        <s:complexType />
+      </s:element>
+      <s:element name="System_Get_ReleaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="System_Get_ReleaseResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLogTSD">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLogTSDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLogTSDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="System_Get_ReleaseSoapIn">
+    <wsdl:part name="parameters" element="tns:System_Get_Release" />
+  </wsdl:message>
+  <wsdl:message name="System_Get_ReleaseSoapOut">
+    <wsdl:part name="parameters" element="tns:System_Get_ReleaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLogTSDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLogTSD" />
+  </wsdl:message>
+  <wsdl:message name="GetLogTSDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLogTSDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebSDataBrUpdaterSoap">
+    <wsdl:operation name="System_Get_Release">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Обновление ПО DataBarCode</wsdl:documentation>
+      <wsdl:input message="tns:System_Get_ReleaseSoapIn" />
+      <wsdl:output message="tns:System_Get_ReleaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogTSD">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Получение логов web service</wsdl:documentation>
+      <wsdl:input message="tns:GetLogTSDSoapIn" />
+      <wsdl:output message="tns:GetLogTSDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebSDataBrUpdaterSoap" type="tns:WebSDataBrUpdaterSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="System_Get_Release">
+      <soap:operation soapAction="WebSDataBrUpdater/System_Get_Release" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogTSD">
+      <soap:operation soapAction="WebSDataBrUpdater/GetLogTSD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebSDataBrUpdaterSoap12" type="tns:WebSDataBrUpdaterSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="System_Get_Release">
+      <soap12:operation soapAction="WebSDataBrUpdater/System_Get_Release" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogTSD">
+      <soap12:operation soapAction="WebSDataBrUpdater/GetLogTSD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebSDataBrUpdater">
+    <wsdl:port name="WebSDataBrUpdaterSoap" binding="tns:WebSDataBrUpdaterSoap">
+      <soap:address location="http://192.168.80.15:27078/websdatabrupdater.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebSDataBrUpdaterSoap12" binding="tns:WebSDataBrUpdaterSoap12">
+      <soap12:address location="http://192.168.80.15:27078/websdatabrupdater.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
