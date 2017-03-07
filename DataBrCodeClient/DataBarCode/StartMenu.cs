@@ -216,7 +216,50 @@ namespace DataBarCode
             }
         }
 
+        public void StartManualUpdateBD()
+        {
+            if (!SqLiteDB.RunUpdateBd)
+            {
+                Thread UpdateManualLocalBd = new Thread(UpdateBd);
+                UpdateManualLocalBd.Start();
+            }
+        }
 
+        public void UpdateBd()
+        {
+            ButtonEnable(false);
+            CLog.WriteInfo("UpdateBd", "Start Manual Update BD");
+            if (BufferToBD.ModeNetTerminalB)
+            {//Если терминал онлайн
+                try
+                {
+                    
+                        SqLiteDB.UpdateDataBaseEU();
+                }
+
+                catch (System.Net.WebException)
+                {//На случай если во время выполнения сломается связть 
+                    SqLiteDB.RunUpdateBd = false;
+                    BufferToBD.ModeNetTerminalB = false;
+
+                }
+
+                catch (System.Net.Sockets.SocketException)
+                {//На случай если во время выполнения сломается связть 
+                    SqLiteDB.RunUpdateBd = false;
+                    BufferToBD.ModeNetTerminalB = false;
+
+                }
+                catch (Exception exe)
+                {
+                    //Если случилось исключение то уже выключаем режим обновления
+                    SqLiteDB.RunUpdateBd = false;
+                    CLog.WriteException("StartMenu.cs", "ThreadUpdateBd", exe.Message);
+                }
+            }
+            ButtonEnable(true);
+
+        }
         public void ThreadUpdateBd()
         {
             CLog.WriteInfo("ThreadUpdateBd", "Strat Automatic Update BD");
@@ -517,9 +560,7 @@ namespace DataBarCode
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            ButtonEnable(false);
-            Thread InitTh = new Thread(InitDataTabel);
-            InitTh.Start();
+            StartManualUpdateBD();
         }
 
         private void buttonPlace_Click(object sender, EventArgs e)
@@ -630,9 +671,7 @@ namespace DataBarCode
             }
             else if (e.KeyCode == Keys.F5)
             {///Обновляем БД
-                ButtonEnable(false);
-                Thread InitTh = new Thread(InitDataTabel);
-                InitTh.Start();
+                StartManualUpdateBD();
 
             }
 
