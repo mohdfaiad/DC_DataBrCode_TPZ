@@ -480,7 +480,7 @@ namespace WebAppDataBrCode
         }
 
         public string InitTableSQLite(TInfo t)
-        {
+        {//
             string path = AppDomain.CurrentDomain.GetData("DataDirectory").ToString();
 
             string baseNameDirectory = path + "\\" + "SQLITE_TSD\\" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + "_" + t.DnsAdress;
