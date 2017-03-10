@@ -11,25 +11,25 @@ namespace DataBarCode
     {
         public static string FileName { get; set; }
         public static Int32 DayToSave { get; set; }
+        public static string PathDir { get; set; }
         public static void InitCLog()
         {
+            String AppData = AppDomain.CurrentDomain.GetData("DataDirectory").ToString();
             try
             {
                 //Создадим папку для логов
-                Directory.CreateDirectory("C:\\WebServiceLog");
+                Directory.CreateDirectory(AppData + "\\WebServiceLog");
             }
-            catch (Exception ex)
-            {
-
-            }
-           
+            catch (Exception) { }
+            PathDir = AppData + "\\WebServiceLog\\";
+            DayToSave = 100;
             CleanLog();
-
+            
         }
 
         private static void ActualFile()
         {
-            string _file = "C:\\WebServiceLog\\";
+            string _file = PathDir;
             _file += DateTime.Now.ToString("yyyy_MM_dd");
             _file += ".txt";
             CLog.FileName = _file;
@@ -45,7 +45,7 @@ namespace DataBarCode
                     Elems.Add(_file);
             }
             //Тут будет чистка логов
-            foreach (var elem in Directory.GetFiles("C:\\WebServiceLog\\"))
+            foreach (var elem in Directory.GetFiles(PathDir))
             {
                 Debug.WriteLine(elem);
                 bool del = true;

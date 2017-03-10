@@ -32,7 +32,6 @@ namespace WebAppDataUpdater
         public Byte[] System_Get_Release()
         {
             AddAllLog("System_Get_Release", "ТСД получает обновление");
-          
             return File.ReadAllBytes("C:\\TSD_Release\\Current\\DataBrCode.zip");
         }
 
