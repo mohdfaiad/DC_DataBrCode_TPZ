@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="WebSDataBrCode" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="WebSDataBrCode" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="WebSDataBrCode">
+      <s:element name="GetServerDataTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerDataTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetServerDataTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BrHeader" type="tns:BrHeader" />
+      <s:complexType name="BrHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MacAdress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DnsAdress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientVersion" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="FixedWeight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="label" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UnitScales" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UnitWeight" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FixedWeightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FixedWeightResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test_Connect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test_ConnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Test_ConnectResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test_Login">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test_LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Test_LoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_LIST_Warehouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listEU" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Place" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeOperation" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="POST_EU_LIST_WarehouseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="POST_EU_LIST_WarehouseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_TASK_MOVE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listEU" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Place" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeOperation" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_TASK_MOVEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="POST_EU_TASK_MOVEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_IN_AGR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listEU" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Agr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeOperation" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_IN_AGRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="POST_EU_IN_AGRResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_LIST_SHIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listEU" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="RZDN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeOperation" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_LIST_SHIPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="POST_EU_LIST_SHIPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_LIST_RZDN_AGR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listEU" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="RZDN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeOperation" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_LIST_RZDN_AGRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="POST_EU_LIST_RZDN_AGRResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_LIST_INVERT_MX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listEU" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="RZDN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MX_LABEL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeOperation" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POST_EU_LIST_INVERT_MXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="POST_EU_LIST_INVERT_MXResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLogTSD">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLogTSDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLogTSDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLogTSDOnline">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLogTSDOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLogTSDOnlineResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataBase_Clone_SQLiteZipFile">
+        <s:complexType />
+      </s:element>
+      <s:element name="DataBase_Clone_SQLiteZipFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataBase_Clone_SQLiteZipFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="System_Get_Release">
+        <s:complexType />
+      </s:element>
+      <s:element name="System_Get_ReleaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="System_Get_ReleaseResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestLog">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestLogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SAVE_LOG_TSD_ZIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SAVE_LOG_TSD_ZIPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SAVE_LOG_TSD_ZIPResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CHECK_CLIENT_VERSION">
+        <s:complexType />
+      </s:element>
+      <s:element name="CHECK_CLIENT_VERSIONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CHECK_CLIENT_VERSIONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServerDataTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerDataTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerDataTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerDataTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServerDataTimeBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="FixedWeightSoapIn">
+    <wsdl:part name="parameters" element="tns:FixedWeight" />
+  </wsdl:message>
+  <wsdl:message name="FixedWeightSoapOut">
+    <wsdl:part name="parameters" element="tns:FixedWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="FixedWeightBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="Test_ConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:Test_Connect" />
+  </wsdl:message>
+  <wsdl:message name="Test_ConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:Test_ConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Test_ConnectBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="Test_LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Test_Login" />
+  </wsdl:message>
+  <wsdl:message name="Test_LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:Test_LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Test_LoginBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_WarehouseSoapIn">
+    <wsdl:part name="parameters" element="tns:POST_EU_LIST_Warehouse" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_WarehouseSoapOut">
+    <wsdl:part name="parameters" element="tns:POST_EU_LIST_WarehouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_WarehouseBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_TASK_MOVESoapIn">
+    <wsdl:part name="parameters" element="tns:POST_EU_TASK_MOVE" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_TASK_MOVESoapOut">
+    <wsdl:part name="parameters" element="tns:POST_EU_TASK_MOVEResponse" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_TASK_MOVEBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_IN_AGRSoapIn">
+    <wsdl:part name="parameters" element="tns:POST_EU_IN_AGR" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_IN_AGRSoapOut">
+    <wsdl:part name="parameters" element="tns:POST_EU_IN_AGRResponse" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_IN_AGRBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_SHIPSoapIn">
+    <wsdl:part name="parameters" element="tns:POST_EU_LIST_SHIP" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_SHIPSoapOut">
+    <wsdl:part name="parameters" element="tns:POST_EU_LIST_SHIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_SHIPBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_RZDN_AGRSoapIn">
+    <wsdl:part name="parameters" element="tns:POST_EU_LIST_RZDN_AGR" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_RZDN_AGRSoapOut">
+    <wsdl:part name="parameters" element="tns:POST_EU_LIST_RZDN_AGRResponse" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_RZDN_AGRBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_INVERT_MXSoapIn">
+    <wsdl:part name="parameters" element="tns:POST_EU_LIST_INVERT_MX" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_INVERT_MXSoapOut">
+    <wsdl:part name="parameters" element="tns:POST_EU_LIST_INVERT_MXResponse" />
+  </wsdl:message>
+  <wsdl:message name="POST_EU_LIST_INVERT_MXBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetLogTSDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLogTSD" />
+  </wsdl:message>
+  <wsdl:message name="GetLogTSDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLogTSDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLogTSDOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLogTSDOnline" />
+  </wsdl:message>
+  <wsdl:message name="GetLogTSDOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLogTSDOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataBase_Clone_SQLiteZipFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DataBase_Clone_SQLiteZipFile" />
+  </wsdl:message>
+  <wsdl:message name="DataBase_Clone_SQLiteZipFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DataBase_Clone_SQLiteZipFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataBase_Clone_SQLiteZipFileBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="System_Get_ReleaseSoapIn">
+    <wsdl:part name="parameters" element="tns:System_Get_Release" />
+  </wsdl:message>
+  <wsdl:message name="System_Get_ReleaseSoapOut">
+    <wsdl:part name="parameters" element="tns:System_Get_ReleaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestLogSoapIn">
+    <wsdl:part name="parameters" element="tns:TestLog" />
+  </wsdl:message>
+  <wsdl:message name="TestLogSoapOut">
+    <wsdl:part name="parameters" element="tns:TestLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestLogBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="SAVE_LOG_TSD_ZIPSoapIn">
+    <wsdl:part name="parameters" element="tns:SAVE_LOG_TSD_ZIP" />
+  </wsdl:message>
+  <wsdl:message name="SAVE_LOG_TSD_ZIPSoapOut">
+    <wsdl:part name="parameters" element="tns:SAVE_LOG_TSD_ZIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SAVE_LOG_TSD_ZIPBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:message name="CHECK_CLIENT_VERSIONSoapIn">
+    <wsdl:part name="parameters" element="tns:CHECK_CLIENT_VERSION" />
+  </wsdl:message>
+  <wsdl:message name="CHECK_CLIENT_VERSIONSoapOut">
+    <wsdl:part name="parameters" element="tns:CHECK_CLIENT_VERSIONResponse" />
+  </wsdl:message>
+  <wsdl:message name="CHECK_CLIENT_VERSIONBrHeader">
+    <wsdl:part name="BrHeader" element="tns:BrHeader" />
+  </wsdl:message>
+  <wsdl:portType name="WebSDataBrCodeSoap">
+    <wsdl:operation name="GetServerDataTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Получение времени с сервера</wsdl:documentation>
+      <wsdl:input message="tns:GetServerDataTimeSoapIn" />
+      <wsdl:output message="tns:GetServerDataTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FixedWeight">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Фиксация веса для ЕУ</wsdl:documentation>
+      <wsdl:input message="tns:FixedWeightSoapIn" />
+      <wsdl:output message="tns:FixedWeightSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test_Connect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Тестирование связи с сервером</wsdl:documentation>
+      <wsdl:input message="tns:Test_ConnectSoapIn" />
+      <wsdl:output message="tns:Test_ConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test_Login">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Проверка авторизации пользователя</wsdl:documentation>
+      <wsdl:input message="tns:Test_LoginSoapIn" />
+      <wsdl:output message="tns:Test_LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_Warehouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Размещение ЕУ на МХ</wsdl:documentation>
+      <wsdl:input message="tns:POST_EU_LIST_WarehouseSoapIn" />
+      <wsdl:output message="tns:POST_EU_LIST_WarehouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_TASK_MOVE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Создание задания на перемещение ЕУ списком</wsdl:documentation>
+      <wsdl:input message="tns:POST_EU_TASK_MOVESoapIn" />
+      <wsdl:output message="tns:POST_EU_TASK_MOVESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_IN_AGR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Задание ЕУ в Агрегат списком</wsdl:documentation>
+      <wsdl:input message="tns:POST_EU_IN_AGRSoapIn" />
+      <wsdl:output message="tns:POST_EU_IN_AGRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_SHIP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Отгрузка ЕУ списком</wsdl:documentation>
+      <wsdl:input message="tns:POST_EU_LIST_SHIPSoapIn" />
+      <wsdl:output message="tns:POST_EU_LIST_SHIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_RZDN_AGR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ЕУ по задание в агрегат списком</wsdl:documentation>
+      <wsdl:input message="tns:POST_EU_LIST_RZDN_AGRSoapIn" />
+      <wsdl:output message="tns:POST_EU_LIST_RZDN_AGRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_INVERT_MX">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Инвентаризация ЕУ под задание на МХ</wsdl:documentation>
+      <wsdl:input message="tns:POST_EU_LIST_INVERT_MXSoapIn" />
+      <wsdl:output message="tns:POST_EU_LIST_INVERT_MXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogTSD">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Получение логов web service</wsdl:documentation>
+      <wsdl:input message="tns:GetLogTSDSoapIn" />
+      <wsdl:output message="tns:GetLogTSDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogTSDOnline">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Получение онлайн терминалов</wsdl:documentation>
+      <wsdl:input message="tns:GetLogTSDOnlineSoapIn" />
+      <wsdl:output message="tns:GetLogTSDOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataBase_Clone_SQLiteZipFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Клонирование БД в SQLite</wsdl:documentation>
+      <wsdl:input message="tns:DataBase_Clone_SQLiteZipFileSoapIn" />
+      <wsdl:output message="tns:DataBase_Clone_SQLiteZipFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="System_Get_Release">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Обновление ПО DataBarCode</wsdl:documentation>
+      <wsdl:input message="tns:System_Get_ReleaseSoapIn" />
+      <wsdl:output message="tns:System_Get_ReleaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestLog">
+      <wsdl:input message="tns:TestLogSoapIn" />
+      <wsdl:output message="tns:TestLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SAVE_LOG_TSD_ZIP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Сохранение логов с ТСД на сервер в ZIP</wsdl:documentation>
+      <wsdl:input message="tns:SAVE_LOG_TSD_ZIPSoapIn" />
+      <wsdl:output message="tns:SAVE_LOG_TSD_ZIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CHECK_CLIENT_VERSION">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Проверка актуальности версии</wsdl:documentation>
+      <wsdl:input message="tns:CHECK_CLIENT_VERSIONSoapIn" />
+      <wsdl:output message="tns:CHECK_CLIENT_VERSIONSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebSDataBrCodeSoap" type="tns:WebSDataBrCodeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerDataTime">
+      <soap:operation soapAction="WebSDataBrCode/GetServerDataTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetServerDataTimeBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixedWeight">
+      <soap:operation soapAction="WebSDataBrCode/FixedWeight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FixedWeightBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Connect">
+      <soap:operation soapAction="WebSDataBrCode/Test_Connect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Test_ConnectBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Login">
+      <soap:operation soapAction="WebSDataBrCode/Test_Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Test_LoginBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_Warehouse">
+      <soap:operation soapAction="WebSDataBrCode/POST_EU_LIST_Warehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:POST_EU_LIST_WarehouseBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_TASK_MOVE">
+      <soap:operation soapAction="WebSDataBrCode/POST_EU_TASK_MOVE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:POST_EU_TASK_MOVEBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_IN_AGR">
+      <soap:operation soapAction="WebSDataBrCode/POST_EU_IN_AGR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:POST_EU_IN_AGRBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_SHIP">
+      <soap:operation soapAction="WebSDataBrCode/POST_EU_LIST_SHIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:POST_EU_LIST_SHIPBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_RZDN_AGR">
+      <soap:operation soapAction="WebSDataBrCode/POST_EU_LIST_RZDN_AGR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:POST_EU_LIST_RZDN_AGRBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_INVERT_MX">
+      <soap:operation soapAction="WebSDataBrCode/POST_EU_LIST_INVERT_MX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:POST_EU_LIST_INVERT_MXBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogTSD">
+      <soap:operation soapAction="WebSDataBrCode/GetLogTSD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogTSDOnline">
+      <soap:operation soapAction="WebSDataBrCode/GetLogTSDOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataBase_Clone_SQLiteZipFile">
+      <soap:operation soapAction="WebSDataBrCode/DataBase_Clone_SQLiteZipFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DataBase_Clone_SQLiteZipFileBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="System_Get_Release">
+      <soap:operation soapAction="WebSDataBrCode/System_Get_Release" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestLog">
+      <soap:operation soapAction="WebSDataBrCode/TestLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TestLogBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SAVE_LOG_TSD_ZIP">
+      <soap:operation soapAction="WebSDataBrCode/SAVE_LOG_TSD_ZIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SAVE_LOG_TSD_ZIPBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CHECK_CLIENT_VERSION">
+      <soap:operation soapAction="WebSDataBrCode/CHECK_CLIENT_VERSION" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CHECK_CLIENT_VERSIONBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebSDataBrCodeSoap12" type="tns:WebSDataBrCodeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerDataTime">
+      <soap12:operation soapAction="WebSDataBrCode/GetServerDataTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetServerDataTimeBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixedWeight">
+      <soap12:operation soapAction="WebSDataBrCode/FixedWeight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FixedWeightBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Connect">
+      <soap12:operation soapAction="WebSDataBrCode/Test_Connect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Test_ConnectBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Login">
+      <soap12:operation soapAction="WebSDataBrCode/Test_Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Test_LoginBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_Warehouse">
+      <soap12:operation soapAction="WebSDataBrCode/POST_EU_LIST_Warehouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:POST_EU_LIST_WarehouseBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_TASK_MOVE">
+      <soap12:operation soapAction="WebSDataBrCode/POST_EU_TASK_MOVE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:POST_EU_TASK_MOVEBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_IN_AGR">
+      <soap12:operation soapAction="WebSDataBrCode/POST_EU_IN_AGR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:POST_EU_IN_AGRBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_SHIP">
+      <soap12:operation soapAction="WebSDataBrCode/POST_EU_LIST_SHIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:POST_EU_LIST_SHIPBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_RZDN_AGR">
+      <soap12:operation soapAction="WebSDataBrCode/POST_EU_LIST_RZDN_AGR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:POST_EU_LIST_RZDN_AGRBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_EU_LIST_INVERT_MX">
+      <soap12:operation soapAction="WebSDataBrCode/POST_EU_LIST_INVERT_MX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:POST_EU_LIST_INVERT_MXBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogTSD">
+      <soap12:operation soapAction="WebSDataBrCode/GetLogTSD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogTSDOnline">
+      <soap12:operation soapAction="WebSDataBrCode/GetLogTSDOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataBase_Clone_SQLiteZipFile">
+      <soap12:operation soapAction="WebSDataBrCode/DataBase_Clone_SQLiteZipFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DataBase_Clone_SQLiteZipFileBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="System_Get_Release">
+      <soap12:operation soapAction="WebSDataBrCode/System_Get_Release" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestLog">
+      <soap12:operation soapAction="WebSDataBrCode/TestLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TestLogBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SAVE_LOG_TSD_ZIP">
+      <soap12:operation soapAction="WebSDataBrCode/SAVE_LOG_TSD_ZIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SAVE_LOG_TSD_ZIPBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CHECK_CLIENT_VERSION">
+      <soap12:operation soapAction="WebSDataBrCode/CHECK_CLIENT_VERSION" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CHECK_CLIENT_VERSIONBrHeader" part="BrHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebSDataBrCode">
+    <wsdl:port name="WebSDataBrCodeSoap" binding="tns:WebSDataBrCodeSoap">
+      <soap:address location="http://localhost:4607/WebSDataBrCode.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebSDataBrCodeSoap12" binding="tns:WebSDataBrCodeSoap12">
+      <soap12:address location="http://localhost:4607/WebSDataBrCode.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

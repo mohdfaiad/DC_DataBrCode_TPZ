@@ -10,6 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppDataBrCode", "WebAppD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppDataUpdater", "WebAppDataUpdater\WebAppDataUpdater.csproj", "{DA8CBA4A-9756-40E3-893C-052BD1FA792A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingService", "TestingService\TestingService.csproj", "{18007B1B-96E1-46B2-8E44-F995AFD4F9EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13667859-AFBE-48E5-B614-CA7873AC0DEB} = {13667859-AFBE-48E5-B614-CA7873AC0DEB}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +33,10 @@ Global
 		{DA8CBA4A-9756-40E3-893C-052BD1FA792A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA8CBA4A-9756-40E3-893C-052BD1FA792A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA8CBA4A-9756-40E3-893C-052BD1FA792A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18007B1B-96E1-46B2-8E44-F995AFD4F9EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18007B1B-96E1-46B2-8E44-F995AFD4F9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18007B1B-96E1-46B2-8E44-F995AFD4F9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18007B1B-96E1-46B2-8E44-F995AFD4F9EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

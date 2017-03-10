@@ -20,6 +20,7 @@ using System.Web.Services.Protocols;
 using System.Security.Principal;
 using System.Configuration;
 using System.Threading;
+using System.Security.Cryptography;
 
 namespace WebAppDataBrCode
 {
@@ -479,11 +480,26 @@ namespace WebAppDataBrCode
             return File.ReadAllBytes(ZipFile); ;
         }
 
+        public static string GetSha256FromString(string strData)
+        {
+            var message = Encoding.ASCII.GetBytes(strData);
+            SHA256Managed hashString = new SHA256Managed();
+            string hex = "";
+
+            var hashValue = hashString.ComputeHash(message);
+            foreach (byte x in hashValue)
+            {
+                hex += String.Format("{0:x2}", x);
+            }
+            return hex;
+        }
+
         public string InitTableSQLite(TInfo t)
         {//
             string path = AppDomain.CurrentDomain.GetData("DataDirectory").ToString();
-
-            string baseNameDirectory = path + "\\" + "SQLITE_TSD\\" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + "_" + t.DnsAdress;
+            
+           // string baseNameDirectory = path + "\\" + "SQLITE_TSD\\" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + "_" + t.DnsAdress;
+            string baseNameDirectory = path + "\\" + "SQLITE_TSD\\" + t.DnsAdress + "-" + GetSha256FromString(t.DnsAdress + DateTime.Now.ToString() + DateTime.Now.Millisecond.ToString());
             Directory.CreateDirectory(path + "\\" + "SQLITE_TSD");
             Directory.CreateDirectory(baseNameDirectory);
 
