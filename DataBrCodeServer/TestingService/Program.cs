@@ -14,7 +14,7 @@ namespace TestingService
             Console.Clear();
             Console.WriteLine("Testing WebService DataBRcode");
             List<PostService> LPost = new List<PostService>();
-            for (int i = 0; i < 20; i++ )
+            for (int i = 0; i < 1; i++ )
             {
                 LPost.Add(new PostService(i, 1000));
             }

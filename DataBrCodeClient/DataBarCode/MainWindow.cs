@@ -112,7 +112,7 @@ namespace DataBarCode
 
             catch (Exception ex)
             {
-                CLog.WriteException("MainWindows.cs", "AsyncCallTestLogin", ex.Message);
+                CLog.WriteException("MainWindows.cs", "AsyncCallTestLogin", ex.ToString());
             }
 
 

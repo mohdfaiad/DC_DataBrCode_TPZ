@@ -1468,6 +1468,15 @@ RELMUCH_PRM	258552982
                     SReturn = "Доступна новая версия ПО";
                 }
 
+                try
+                {
+                    Double CStableVer = Double.Parse(CurrentClient.Replace('.', ','));
+                    Double ClientVer = Double.Parse(t.ClientVersion.Replace('.', ','));
+                    if (ClientVer > CStableVer)
+                        SReturn = "Версия для разарботчиков";
+                }
+                catch (Exception ex) { AddAllLog(t, "CHECK_CLIENT_VERSION", ex.Message); }
+
                 AddAllLog(t, "CHECK_CLIENT_VERSION", SReturn);
                 EndUser();
             }
