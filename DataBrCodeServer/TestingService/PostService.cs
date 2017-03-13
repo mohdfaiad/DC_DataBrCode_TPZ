@@ -64,7 +64,7 @@ namespace TestingService
                 byte[] test = BrServer.DataBase_Clone_SQLiteZipFile(header);
                // BrServer.GetLogTSD();
                 DateTime dEnd = DateTime.Now;
-                Console.WriteLine(_uid + ": DataBase_Clone_SQLiteZipFile - Completed: " + (dEnd - dEnd).ToString());
+                Console.WriteLine(_uid + ": DataBase_Clone_SQLiteZipFile - Completed: " + (dEnd - dBegin).ToString());
                 Thread.Sleep(_SleepThread);
             }
 

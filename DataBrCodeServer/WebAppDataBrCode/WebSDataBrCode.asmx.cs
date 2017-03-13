@@ -1272,7 +1272,7 @@ RELMUCH_PRM	258552982
             var List = Directory.GetDirectories(baseNameDirectory);
             int BufferCounterAll = List.Length;
             int BufferOldCount = 10; //Если менее 10 шт то ничего не делаем
-            int BufferOldTimeHour = 2; //Удаляем старше стольки то часов
+            int BufferOldTimeHour = 1; //Удаляем старше стольки то часов
             int BufferCounterDel = 0;
 
             if (List.Length > BufferOldCount)
