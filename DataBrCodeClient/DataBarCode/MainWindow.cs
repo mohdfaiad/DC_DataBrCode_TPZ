@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Net;
+using System.Threading;
 
 
 namespace DataBarCode
@@ -14,6 +15,9 @@ namespace DataBarCode
     public partial class MainWindow : Form
     {
         Settings set;
+        StartMenu FStart;
+        string Date;
+        string Smena;
         public MainWindow()
         {
             InitializeComponent();
@@ -38,16 +42,24 @@ namespace DataBarCode
 
             SettingsTsd.USEROLD = textBoxLogin.Text;
             SettingsTsd.SaveSettings();
-            //Сначала все проверим
+            btnLogin.Enabled = false;
+            //-----------------
+            CBrHeader.Login = textBoxLogin.Text;
+            CBrHeader.Password = textBoxPassword.Text;
+        //    Thread tr = new Thread(CheckLogin);
+        //    tr.Start();
+            //Сделаем асинхронный вызов
             WebReference.WebSDataBrCode BrServer = new WebReference.WebSDataBrCode();
             BrServer.SoapVersion = System.Web.Services.Protocols.SoapProtocolVersion.Soap12;
             BrServer.BrHeaderValue = CBrHeader.GetHeader();
-            BrServer.Credentials = new NetworkCredential(textBoxLogin.Text, textBoxPassword.Text);
+            BrServer.Credentials = new NetworkCredential(CBrHeader.Login, CBrHeader.Password);
             BrServer.Url = set.AdressAppServer;
-            bool testLogin = false;
             try
             {
-                testLogin = BrServer.Test_Login();
+                Date = textBoxDate.Text;
+                Smena = DropDownSmena.Items[DropDownSmena.SelectedIndex].ToString();
+
+                BrServer.BeginTest_Login(AsyncCallTestLogin, BrServer);
 
             }
 
@@ -70,19 +82,96 @@ namespace DataBarCode
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); return; }
-
-            if (testLogin)
-            {
-                string Date = textBoxDate.Text;
-                StartMenu FStart = new StartMenu(textBoxLogin.Text, textBoxPassword.Text, Date, DropDownSmena.Items[DropDownSmena.SelectedIndex].ToString());
-                FStart.Show();
-            }
-            else
-            {
-                MessageBox.Show("Введите правильный логин или пароль");
-
-            }
         }
+
+
+        public void AsyncCallTestLogin(IAsyncResult res)
+        {
+
+            try
+            {
+                WebReference.WebSDataBrCode BrServer = res.AsyncState as WebReference.WebSDataBrCode;
+                bool result = BrServer.EndTest_Login(res);
+                if (result)
+                {
+                    btnLogin.BeginInvoke(new Action(() =>
+                    {
+                        btnLogin.Enabled = true;
+                    }));
+
+                    FStart = new StartMenu(CBrHeader.Login, CBrHeader.Password, Date, Smena);
+                    FStart.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Введите правильный логин или пароль");
+
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                CLog.WriteException("MainWindows.cs", "AsyncCallTestLogin", ex.Message);
+            }
+
+
+
+        }
+
+        //private void CheckLogin() {
+        //    //Проверка логина, для теста
+        //    //Сначала все проверим
+        //    WebReference.WebSDataBrCode BrServer = new WebReference.WebSDataBrCode();
+        //    BrServer.SoapVersion = System.Web.Services.Protocols.SoapProtocolVersion.Soap12;
+        //    BrServer.BrHeaderValue = CBrHeader.GetHeader();
+        //    BrServer.Credentials = new NetworkCredential(CBrHeader.Login, CBrHeader.Password);
+        //    BrServer.Url = set.AdressAppServer;
+        //    bool testLogin = false;
+        //    try
+        //    {
+        //        testLogin = BrServer.Test_Login();
+
+        //    }
+
+        //    catch (WebException ex)
+        //    {
+        //        string mes = ex.ToString();
+        //        CLog.WriteException("MainWindow", "btnLogin_Click", ex.ToString());
+        //        //MessageBox.Show(ex.ToString());
+        //        if (mes.IndexOf("Unable to connect to the remote server") != -1)
+        //        {
+        //            MessageBox.Show("Нет соединения с сервером: " + set.AdressAppServer);
+        //            return;
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Введите правильный логин или пароль");
+        //            return;
+        //        }
+
+
+        //    }
+        //    catch (Exception ex) { MessageBox.Show(ex.Message); return; }
+
+        //    if (testLogin)
+        //    {
+        //        string Date = textBoxDate.Text;
+        //        StartMenu FStart = new StartMenu(textBoxLogin.Text, textBoxPassword.Text, Date, DropDownSmena.Items[DropDownSmena.SelectedIndex].ToString());
+        //        FStart.Show();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Введите правильный логин или пароль");
+
+        //    }
+
+
+        //    btnLogin.BeginInvoke(new Action(() =>
+        //    {
+        //        btnLogin.Enabled = true;
+        //    }));
+        //}
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {

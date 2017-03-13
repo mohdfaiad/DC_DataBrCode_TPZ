@@ -53,7 +53,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <None Include="Service References\ServiceReference1\TestingService.ServiceReference1.CHECK_CLIENT_VERSIONResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
