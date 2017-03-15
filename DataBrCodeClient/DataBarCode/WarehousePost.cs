@@ -468,15 +468,9 @@ namespace DataBarCode
                     insert.Dispose();
                     reader.Dispose();
                 }
-
-
-
-
-                _tblEU.Rows.Add(row1);
+                _tblEU.Rows.InsertAt(row1, 0);
 
                 listEU.Add(EU);
-
-              
                 labelCountScan.BeginInvoke(new Action(() =>
                 {
                     labelCountScan.Text = listEU.Count.ToString();
@@ -1052,7 +1046,7 @@ namespace DataBarCode
                         row1["Марка"] = search.SelectMarka;
                         row1["Размер"] = search.SelectRazmer;
                         row1["Commit"] = "-1";
-                        _tblEU.Rows.Add(row1);
+                        _tblEU.Rows.InsertAt(row1, 0);
 
                         listEU.Add(search.SelectLabel);
 
@@ -1107,8 +1101,8 @@ namespace DataBarCode
                     row1["Марка"] = search.SelectMarka;
                     row1["Размер"] = search.SelectRazmer;
                     row1["Commit"] = "-1";
-                    _tblEU.Rows.Add(row1);
-
+                   // _tblEU.Rows.Add(row1);
+                    _tblEU.Rows.InsertAt(row1, 0);
                     listEU.Add(search.SelectLabel);
 
 
