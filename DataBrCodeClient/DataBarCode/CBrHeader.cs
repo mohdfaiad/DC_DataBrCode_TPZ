@@ -31,7 +31,7 @@ namespace DataBarCode
             }
 
             catch (Exception) {}
-            ClientVersion = "0.192";
+            ClientVersion = "0.193";
 
         }
         static public WebReference.BrHeader GetHeader()
