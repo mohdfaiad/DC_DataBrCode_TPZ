@@ -33,15 +33,16 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.labelBD = new System.Windows.Forms.Label();
             this.dataGridEu = new System.Windows.Forms.DataGrid();
-            this.labelMXMore = new System.Windows.Forms.Label();
-            this.labelMX = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer();
             this.dataGridTableStyle1 = new System.Windows.Forms.DataGridTableStyle();
             this.dataGridTextBoxColumn1 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn2 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn3 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn4 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.labelMXMore = new System.Windows.Forms.Label();
+            this.labelMX = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer();
+            this.dataGridTextBoxColumn5 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.SuspendLayout();
             // 
             // labelBD
@@ -65,43 +66,11 @@
             this.dataGridEu.TabIndex = 13;
             this.dataGridEu.TableStyles.Add(this.dataGridTableStyle1);
             // 
-            // labelMXMore
-            // 
-            this.labelMXMore.ForeColor = System.Drawing.Color.White;
-            this.labelMXMore.Location = new System.Drawing.Point(3, 23);
-            this.labelMXMore.Name = "labelMXMore";
-            this.labelMXMore.Size = new System.Drawing.Size(232, 22);
-            this.labelMXMore.Text = "MX_More";
-            // 
-            // labelMX
-            // 
-            this.labelMX.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
-            this.labelMX.ForeColor = System.Drawing.Color.White;
-            this.labelMX.Location = new System.Drawing.Point(0, 2);
-            this.labelMX.Name = "labelMX";
-            this.labelMX.Size = new System.Drawing.Size(209, 21);
-            this.labelMX.Text = "MX";
-            this.labelMX.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(215, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 200;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // dataGridTableStyle1
             // 
             this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn1);
             this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn2);
+            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn5);
             this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn3);
             this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn4);
             this.dataGridTableStyle1.MappingName = "EU";
@@ -142,6 +111,47 @@
             this.dataGridTextBoxColumn4.NullText = "-";
             this.dataGridTextBoxColumn4.Width = 90;
             // 
+            // labelMXMore
+            // 
+            this.labelMXMore.ForeColor = System.Drawing.Color.White;
+            this.labelMXMore.Location = new System.Drawing.Point(3, 23);
+            this.labelMXMore.Name = "labelMXMore";
+            this.labelMXMore.Size = new System.Drawing.Size(232, 22);
+            this.labelMXMore.Text = "MX_More";
+            // 
+            // labelMX
+            // 
+            this.labelMX.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
+            this.labelMX.ForeColor = System.Drawing.Color.White;
+            this.labelMX.Location = new System.Drawing.Point(0, 2);
+            this.labelMX.Name = "labelMX";
+            this.labelMX.Size = new System.Drawing.Size(209, 21);
+            this.labelMX.Text = "MX";
+            this.labelMX.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(215, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // dataGridTextBoxColumn5
+            // 
+            this.dataGridTextBoxColumn5.Format = "";
+            this.dataGridTextBoxColumn5.FormatInfo = null;
+            this.dataGridTextBoxColumn5.HeaderText = "Вес";
+            this.dataGridTextBoxColumn5.MappingName = "Вес";
+            this.dataGridTextBoxColumn5.NullText = "-";
+            // 
             // WareHouseView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -175,5 +185,6 @@
         private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn2;
         private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn3;
         private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn4;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn5;
     }
 }

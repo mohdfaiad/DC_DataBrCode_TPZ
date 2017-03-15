@@ -209,6 +209,18 @@ namespace DataBarCode
                     case ListScanOperation.MXView:
                         {
 
+                                if (_view == null)
+                                {
+                                    _view = new WareHouseView("MX0262.0006029");
+                                    _view.Show();
+                                }
+                                else
+                                {
+                                    _view.Close();
+                                    // _scan.Dispose();
+                                    _view = new WareHouseView("MX0262.0006029");
+                                    _view.Show();
+                                }
                             break;
                         }
 

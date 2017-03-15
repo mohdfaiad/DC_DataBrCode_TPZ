@@ -51,7 +51,7 @@ namespace DataBarCode
                 ;//(SQLiteConnection)factory.CreateConnection();
                 connection.ConnectionString = "Data Source = " + SqLiteDB.pathDBFull_EU;
                 SQLiteCommand command = new SQLiteCommand(connection);
-                SQLiteCommand insert = new SQLiteCommand("select EU.RELMUCH_LABEL 'Label', EU.RPRT_NOM 'УЕ', EU.MARKA_NAME 'Марка',  printf('%sx%s', EU.RELMUCH_THICKNESS, EU.RELMUCH_WIDTH) 'Размер'  from EU WHERE EU.TEHUZ_KOD = (select TEHUZ.TEHUZ_KOD FROM TEHUZ WHERE TEHUZ.TEHUZ_LABEL = '" + this.LabelMX + "') AND  EU.INTRV_TMEND = '' AND EU.SIGN='1' LIMIT 50;", connection);
+                SQLiteCommand insert = new SQLiteCommand("select EU.RELMUCH_LABEL 'Label', EU.RPRT_NOM 'УЕ', EU.RELMUCH_VES 'Вес', EU.MARKA_NAME 'Марка',  printf('%sx%s', EU.RELMUCH_THICKNESS, EU.RELMUCH_WIDTH) 'Размер'  from EU WHERE EU.TEHUZ_KOD = (select TEHUZ.TEHUZ_KOD FROM TEHUZ WHERE TEHUZ.TEHUZ_LABEL = '" + this.LabelMX + "') AND  EU.INTRV_TMEND = '' AND EU.SIGN='1' LIMIT 50;", connection);
                 connection.Open();
                 SQLiteDataReader reader = insert.ExecuteReader();
                 _tblEU.Load(reader);
