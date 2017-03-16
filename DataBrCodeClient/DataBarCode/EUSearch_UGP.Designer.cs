@@ -123,7 +123,7 @@
             this.dataGridTextBoxColumn1.HeaderText = "ФОК";
             this.dataGridTextBoxColumn1.MappingName = "RPRT_NOM";
             this.dataGridTextBoxColumn1.NullText = "-";
-            this.dataGridTextBoxColumn1.Width = 80;
+            this.dataGridTextBoxColumn1.Width = 90;
             // 
             // dataGridTextBoxColumn3
             // 

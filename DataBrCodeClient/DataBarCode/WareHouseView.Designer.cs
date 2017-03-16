@@ -36,13 +36,13 @@
             this.dataGridTableStyle1 = new System.Windows.Forms.DataGridTableStyle();
             this.dataGridTextBoxColumn1 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn2 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dataGridTextBoxColumn5 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn3 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn4 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.labelMXMore = new System.Windows.Forms.Label();
             this.labelMX = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer();
-            this.dataGridTextBoxColumn5 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.SuspendLayout();
             // 
             // labelBD
@@ -82,7 +82,7 @@
             this.dataGridTextBoxColumn1.HeaderText = "УЕ";
             this.dataGridTextBoxColumn1.MappingName = "УЕ";
             this.dataGridTextBoxColumn1.NullText = "-";
-            this.dataGridTextBoxColumn1.Width = 75;
+            this.dataGridTextBoxColumn1.Width = 90;
             // 
             // dataGridTextBoxColumn2
             // 
@@ -92,6 +92,14 @@
             this.dataGridTextBoxColumn2.MappingName = "Марка";
             this.dataGridTextBoxColumn2.NullText = "-";
             this.dataGridTextBoxColumn2.Width = 75;
+            // 
+            // dataGridTextBoxColumn5
+            // 
+            this.dataGridTextBoxColumn5.Format = "";
+            this.dataGridTextBoxColumn5.FormatInfo = null;
+            this.dataGridTextBoxColumn5.HeaderText = "Вес";
+            this.dataGridTextBoxColumn5.MappingName = "Вес";
+            this.dataGridTextBoxColumn5.NullText = "-";
             // 
             // dataGridTextBoxColumn3
             // 
@@ -143,14 +151,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // dataGridTextBoxColumn5
-            // 
-            this.dataGridTextBoxColumn5.Format = "";
-            this.dataGridTextBoxColumn5.FormatInfo = null;
-            this.dataGridTextBoxColumn5.HeaderText = "Вес";
-            this.dataGridTextBoxColumn5.MappingName = "Вес";
-            this.dataGridTextBoxColumn5.NullText = "-";
             // 
             // WareHouseView
             // 

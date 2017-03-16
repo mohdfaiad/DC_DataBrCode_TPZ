@@ -142,7 +142,7 @@ namespace DataBarCode
             /*
              * 
              * */
-            CreateColumn("УЕ", "УЕ", 160, 0);
+            CreateColumn("УЕ", "УЕ", 180, 0);
             CreateColumn("Марка", "Марка", 120, 1);
             CreateColumn("Вес", "Вес", 100, 2);
             CreateColumn("Размер", "Размер", 140, 3);

@@ -40,9 +40,9 @@
             this.dataGridTextBoxColumn2 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn3 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn4 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dataGridTextBoxColumn5 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.dataGridTextBoxColumn5 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.SuspendLayout();
             // 
             // labelMX
@@ -99,7 +99,7 @@
             this.dataGridTextBoxColumn1.HeaderText = "УЕ";
             this.dataGridTextBoxColumn1.MappingName = "УЕ";
             this.dataGridTextBoxColumn1.NullText = "-";
-            this.dataGridTextBoxColumn1.Width = 80;
+            this.dataGridTextBoxColumn1.Width = 90;
             // 
             // dataGridTextBoxColumn2
             // 
@@ -128,6 +128,15 @@
             this.dataGridTextBoxColumn4.NullText = "-";
             this.dataGridTextBoxColumn4.Width = 90;
             // 
+            // dataGridTextBoxColumn5
+            // 
+            this.dataGridTextBoxColumn5.Format = "";
+            this.dataGridTextBoxColumn5.FormatInfo = null;
+            this.dataGridTextBoxColumn5.HeaderText = "Вес";
+            this.dataGridTextBoxColumn5.MappingName = "Вес";
+            this.dataGridTextBoxColumn5.NullText = "-";
+            this.dataGridTextBoxColumn5.Width = 60;
+            // 
             // buttonNext
             // 
             this.buttonNext.BackColor = System.Drawing.Color.Azure;
@@ -152,15 +161,6 @@
             this.buttonSearch.TabIndex = 52;
             this.buttonSearch.Text = "Поиск";
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // dataGridTextBoxColumn5
-            // 
-            this.dataGridTextBoxColumn5.Format = "";
-            this.dataGridTextBoxColumn5.FormatInfo = null;
-            this.dataGridTextBoxColumn5.HeaderText = "Вес";
-            this.dataGridTextBoxColumn5.MappingName = "Вес";
-            this.dataGridTextBoxColumn5.NullText = "-";
-            this.dataGridTextBoxColumn5.Width = 60;
             // 
             // EUSearch
             // 
