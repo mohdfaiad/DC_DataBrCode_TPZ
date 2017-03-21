@@ -36,30 +36,17 @@ namespace DataBarCode
         }
         private static void CleanLog()
         {
-            List<string> Elems = new List<string>();
-            for (int i=0; i <= DayToSave; i++) {
-                   string _file;
-                    _file = DateTime.Now.AddDays(-i).ToString("yyyy_MM_dd");
-                    _file += ".txt";
-                    //Debug.WriteLine(_file);
-                    Elems.Add(_file);
-            }
             //Тут будет чистка логов
             foreach (var elem in Directory.GetFiles("Log"))
             {
                 Debug.WriteLine(elem);
-                bool del = true;
-                foreach (var e in Elems) {
-                    if (elem.IndexOf(e) != -1)
-                    {
-                        del = false;
-                        break;
-                    }
+                bool del = false;
+                if (File.GetCreationTime(elem) < DateTime.Now.AddDays(-DayToSave))
+                {
+                    del = true;
                 }
-
                 if (del)
                 {
-                    //Debug.WriteLine("Delete: " + elem);
                     File.Delete(elem);
                 }
             }

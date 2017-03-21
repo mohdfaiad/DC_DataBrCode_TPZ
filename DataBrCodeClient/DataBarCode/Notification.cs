@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
-
+ 
 
 namespace DataBarCode
 {
@@ -62,4 +62,35 @@ namespace DataBarCode
             vib.SetLedStatus(1, OpenNETCF.WindowsCE.Notification.Led.LedState.Off);
         }
     }
+
+    public static class ScreenShot
+    {
+        public static bool MakeShot()
+        {
+            bool bRet = false;
+            try
+            {
+                string filename = "Log/" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + ".bmp";
+                BeeMobile.CaptureScreen.Snapshot(filename, new System.Drawing.Rectangle(0, 0, 480, 640));
+                bRet = true;
+            }
+            catch (Exception ex) { CLog.WriteException("Notification", "MakeShot", ex.ToString()); }
+            return bRet;
+        }
+
+        public static bool MakeShot(string Module)
+        {
+            bool bRet = false;
+            try
+            {
+                string filename = "Log/" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + "_" + Module + ".bmp";
+                BeeMobile.CaptureScreen.Snapshot(filename, new System.Drawing.Rectangle(0, 0, 480, 640));
+                bRet = true;
+            }
+            catch (Exception ex) { CLog.WriteException("Notification", "MakeShot", ex.ToString()); }
+            return bRet;
+        }
+    }
+
+
 }

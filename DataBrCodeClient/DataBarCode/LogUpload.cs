@@ -116,6 +116,16 @@ namespace DataBarCode
                 Thread InitTh = new Thread(UploadLog);
                 InitTh.Start();
             }
+
+            else if (e.KeyCode == Keys.F16)
+            {
+                bool rezult = ScreenShot.MakeShot("LogUpdate");
+                if (rezult)
+                    MessageBox.Show("Снимок успешно сохранен", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
+                else
+                    MessageBox.Show("Ошибка сохранения", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
+
+            }
         }
     }
 }
