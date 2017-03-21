@@ -600,6 +600,15 @@ namespace DataBarCode
                 CLog.WriteInfo("DataScales.cs", "Close UI Form");
                 this.Close();
             }
+            else if (e.KeyCode == Keys.F16)
+            {
+                bool rezult = ScreenShot.MakeShot("DataScales");
+                if (rezult)
+                    MessageBox.Show("Снимок успешно сохранен", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
+                else
+                    MessageBox.Show("Ошибка сохранения", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
+
+            }
         }
     }
 }

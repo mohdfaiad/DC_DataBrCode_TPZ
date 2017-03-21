@@ -472,6 +472,16 @@ namespace DataBarCode
             {
                 SetShip();
             }
+
+            else if (e.KeyCode == Keys.F16)
+            {
+                bool rezult = ScreenShot.MakeShot("StartMenu");
+                if (rezult)
+                    MessageBox.Show("Снимок успешно сохранен", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
+                else
+                    MessageBox.Show("Ошибка сохранения", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
+
+            }
         }
 
 
