@@ -36,11 +36,7 @@
             this.labelBD = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer();
             this.buttonapr = new System.Windows.Forms.Button();
-            this.buttonpga = new System.Windows.Forms.Button();
-            this.buttontgp = new System.Windows.Forms.Button();
             this.buttonT19 = new System.Windows.Forms.Button();
-            this.buttonT50 = new System.Windows.Forms.Button();
-            this.buttonT21 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -81,72 +77,24 @@
             this.buttonapr.BackColor = System.Drawing.Color.Azure;
             this.buttonapr.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
             this.buttonapr.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonapr.Location = new System.Drawing.Point(26, 100);
+            this.buttonapr.Location = new System.Drawing.Point(26, 39);
             this.buttonapr.Name = "buttonapr";
             this.buttonapr.Size = new System.Drawing.Size(186, 26);
             this.buttonapr.TabIndex = 25;
-            this.buttonapr.Text = "АПР-1550";
+            this.buttonapr.Text = "АПР";
             this.buttonapr.Click += new System.EventHandler(this.buttonapr_Click);
-            // 
-            // buttonpga
-            // 
-            this.buttonpga.BackColor = System.Drawing.Color.Azure;
-            this.buttonpga.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.buttonpga.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonpga.Location = new System.Drawing.Point(26, 68);
-            this.buttonpga.Name = "buttonpga";
-            this.buttonpga.Size = new System.Drawing.Size(186, 26);
-            this.buttonpga.TabIndex = 26;
-            this.buttonpga.Text = "ПГА 2-8";
-            this.buttonpga.Click += new System.EventHandler(this.buttonpga_Click);
-            // 
-            // buttontgp
-            // 
-            this.buttontgp.BackColor = System.Drawing.Color.Azure;
-            this.buttontgp.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.buttontgp.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttontgp.Location = new System.Drawing.Point(26, 36);
-            this.buttontgp.Name = "buttontgp";
-            this.buttontgp.Size = new System.Drawing.Size(186, 26);
-            this.buttontgp.TabIndex = 27;
-            this.buttontgp.Text = "ТПГ 159";
-            this.buttontgp.Click += new System.EventHandler(this.buttontgp_Click);
             // 
             // buttonT19
             // 
             this.buttonT19.BackColor = System.Drawing.Color.Azure;
             this.buttonT19.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
             this.buttonT19.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonT19.Location = new System.Drawing.Point(26, 134);
+            this.buttonT19.Location = new System.Drawing.Point(26, 74);
             this.buttonT19.Name = "buttonT19";
             this.buttonT19.Size = new System.Drawing.Size(186, 26);
             this.buttonT19.TabIndex = 28;
-            this.buttonT19.Text = "ТЭСА 19-50";
+            this.buttonT19.Text = "ТЭСА";
             this.buttonT19.Click += new System.EventHandler(this.buttonT19_Click);
-            // 
-            // buttonT50
-            // 
-            this.buttonT50.BackColor = System.Drawing.Color.Azure;
-            this.buttonT50.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.buttonT50.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonT50.Location = new System.Drawing.Point(25, 166);
-            this.buttonT50.Name = "buttonT50";
-            this.buttonT50.Size = new System.Drawing.Size(186, 26);
-            this.buttonT50.TabIndex = 29;
-            this.buttonT50.Text = "ТЭСА 50-76";
-            this.buttonT50.Click += new System.EventHandler(this.buttonT50_Click);
-            // 
-            // buttonT21
-            // 
-            this.buttonT21.BackColor = System.Drawing.Color.Azure;
-            this.buttonT21.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.buttonT21.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonT21.Location = new System.Drawing.Point(26, 198);
-            this.buttonT21.Name = "buttonT21";
-            this.buttonT21.Size = new System.Drawing.Size(186, 26);
-            this.buttonT21.TabIndex = 30;
-            this.buttonT21.Text = "ТЭСА 21-89";
-            this.buttonT21.Click += new System.EventHandler(this.buttonT21_Click);
             // 
             // MenuAgr
             // 
@@ -156,17 +104,13 @@
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(238, 295);
             this.ControlBox = false;
-            this.Controls.Add(this.buttonT21);
-            this.Controls.Add(this.buttonT50);
             this.Controls.Add(this.buttonT19);
-            this.Controls.Add(this.buttontgp);
-            this.Controls.Add(this.buttonpga);
             this.Controls.Add(this.buttonapr);
             this.Controls.Add(this.labelBD);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Name = "MenuAgr";
-            this.Text = "MenuAgr";
+            this.Text = "Агрегаты";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MenuAgr_KeyDown);
             this.ResumeLayout(false);
 
@@ -179,10 +123,6 @@
         private System.Windows.Forms.Label labelBD;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button buttonapr;
-        private System.Windows.Forms.Button buttonpga;
-        private System.Windows.Forms.Button buttontgp;
         private System.Windows.Forms.Button buttonT19;
-        private System.Windows.Forms.Button buttonT50;
-        private System.Windows.Forms.Button buttonT21;
     }
 }

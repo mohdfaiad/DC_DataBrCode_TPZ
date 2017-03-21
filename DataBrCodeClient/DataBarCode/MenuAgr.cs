@@ -146,7 +146,7 @@ namespace DataBarCode
         {
             if (_WareHousePost == null)
             {
-                _WareHousePost = new WarehousePost(bcr, "MX0263.2630001", ScanOperation);
+                _WareHousePost = new WarehousePost(bcr, "MX0000", ScanOperation);
                 _WareHousePost.Show();
             }
 
@@ -157,52 +157,12 @@ namespace DataBarCode
                 {
                     _WareHousePost.Close();
                     // UIEU.Dispose();
-                    _WareHousePost = new WarehousePost(bcr, "MX0263.2630001", ScanOperation);
+                    _WareHousePost = new WarehousePost(bcr, "MX0000", ScanOperation);
                     _WareHousePost.Show();
                 }
             }
         }
 
-        private void buttonT50_Click(object sender, EventArgs e)
-        {
-            if (_WareHousePost == null)
-            {
-                _WareHousePost = new WarehousePost(bcr, "MX0324.3240001", ScanOperation);
-                _WareHousePost.Show();
-            }
-
-            else
-            {
-                if (_WareHousePost.FormActive) { }
-                else
-                {
-                    _WareHousePost.Close();
-                    // UIEU.Dispose();
-                    _WareHousePost = new WarehousePost(bcr, "MX0324.3240001", ScanOperation);
-                    _WareHousePost.Show();
-                }
-            }
-        }
-
-        private void buttonT21_Click(object sender, EventArgs e)
-        {
-            if (_WareHousePost == null)
-            {
-                _WareHousePost = new WarehousePost(bcr, "MX0362.3620001", ScanOperation);
-                _WareHousePost.Show();
-            }
-
-            else
-            {
-                if (_WareHousePost.FormActive) { }
-                else
-                {
-                    _WareHousePost.Close();
-                    // UIEU.Dispose();
-                    _WareHousePost = new WarehousePost(bcr, "MX0362.3620001", ScanOperation);
-                    _WareHousePost.Show();
-                }
-            }
-        }
+      
     }
 }

@@ -39,12 +39,12 @@
             this.buttonOutCGP = new System.Windows.Forms.Button();
             this.buttonPlace = new System.Windows.Forms.Button();
             this.buttonAgr = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.labelStatus = new System.Windows.Forms.Label();
             this.labelBD = new System.Windows.Forms.Label();
             this.timerUpdateDich = new System.Windows.Forms.Timer();
             this.timerUpdateRelise = new System.Windows.Forms.Timer();
+            this.buttonPushUE = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonScales
@@ -52,7 +52,7 @@
             this.buttonScales.BackColor = System.Drawing.Color.Azure;
             this.buttonScales.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
             this.buttonScales.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonScales.Location = new System.Drawing.Point(23, 49);
+            this.buttonScales.Location = new System.Drawing.Point(23, 79);
             this.buttonScales.Name = "buttonScales";
             this.buttonScales.Size = new System.Drawing.Size(190, 26);
             this.buttonScales.TabIndex = 23;
@@ -90,7 +90,7 @@
             this.buttonWarehouse.BackColor = System.Drawing.Color.Azure;
             this.buttonWarehouse.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
             this.buttonWarehouse.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonWarehouse.Location = new System.Drawing.Point(23, 78);
+            this.buttonWarehouse.Location = new System.Drawing.Point(23, 108);
             this.buttonWarehouse.Name = "buttonWarehouse";
             this.buttonWarehouse.Size = new System.Drawing.Size(190, 26);
             this.buttonWarehouse.TabIndex = 30;
@@ -103,7 +103,7 @@
             this.buttonOutCGP.Enabled = false;
             this.buttonOutCGP.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
             this.buttonOutCGP.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonOutCGP.Location = new System.Drawing.Point(23, 107);
+            this.buttonOutCGP.Location = new System.Drawing.Point(23, 137);
             this.buttonOutCGP.Name = "buttonOutCGP";
             this.buttonOutCGP.Size = new System.Drawing.Size(190, 26);
             this.buttonOutCGP.TabIndex = 31;
@@ -116,7 +116,7 @@
             this.buttonPlace.Enabled = false;
             this.buttonPlace.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
             this.buttonPlace.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonPlace.Location = new System.Drawing.Point(23, 135);
+            this.buttonPlace.Location = new System.Drawing.Point(23, 165);
             this.buttonPlace.Name = "buttonPlace";
             this.buttonPlace.Size = new System.Drawing.Size(190, 26);
             this.buttonPlace.TabIndex = 32;
@@ -129,25 +129,12 @@
             this.buttonAgr.Enabled = false;
             this.buttonAgr.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
             this.buttonAgr.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonAgr.Location = new System.Drawing.Point(23, 164);
+            this.buttonAgr.Location = new System.Drawing.Point(23, 194);
             this.buttonAgr.Name = "buttonAgr";
             this.buttonAgr.Size = new System.Drawing.Size(190, 26);
             this.buttonAgr.TabIndex = 33;
             this.buttonAgr.Text = "Агрегаты";
             this.buttonAgr.Click += new System.EventHandler(this.buttonAgr_Click_1);
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.Azure;
-            this.buttonUpdate.Enabled = false;
-            this.buttonUpdate.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.buttonUpdate.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonUpdate.Location = new System.Drawing.Point(23, 196);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(190, 26);
-            this.buttonUpdate.TabIndex = 34;
-            this.buttonUpdate.Text = "Обновление (F5)";
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonExit
             // 
@@ -189,6 +176,18 @@
             this.timerUpdateRelise.Interval = 10000;
             this.timerUpdateRelise.Tick += new System.EventHandler(this.timerUpdateRelise_Tick);
             // 
+            // buttonPushUE
+            // 
+            this.buttonPushUE.BackColor = System.Drawing.Color.Azure;
+            this.buttonPushUE.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
+            this.buttonPushUE.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.buttonPushUE.Location = new System.Drawing.Point(24, 50);
+            this.buttonPushUE.Name = "buttonPushUE";
+            this.buttonPushUE.Size = new System.Drawing.Size(190, 26);
+            this.buttonPushUE.TabIndex = 38;
+            this.buttonPushUE.Text = "Прием УЕ";
+            this.buttonPushUE.Click += new System.EventHandler(this.buttonPushUE_Click);
+            // 
             // StartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -197,10 +196,10 @@
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(238, 295);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonPushUE);
             this.Controls.Add(this.labelBD);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonAgr);
             this.Controls.Add(this.buttonPlace);
             this.Controls.Add(this.buttonOutCGP);
@@ -227,11 +226,11 @@
         private System.Windows.Forms.Button buttonOutCGP;
         private System.Windows.Forms.Button buttonPlace;
         private System.Windows.Forms.Button buttonAgr;
-        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Label labelBD;
         private System.Windows.Forms.Timer timerUpdateDich;
         private System.Windows.Forms.Timer timerUpdateRelise;
+        private System.Windows.Forms.Button buttonPushUE;
     }
 }

@@ -230,7 +230,7 @@ namespace DataBarCode
                             ///TN = "S0001500000106002016";
                             if (_ship == null)
                             {
-                                _ship = new EUShip(bcr, "S0001502548249652017");
+                                _ship = new EUShip(bcr, "S0001500000147412017");
                                 _ship.Show();
                             }
                             else
@@ -240,7 +240,7 @@ namespace DataBarCode
 
                                 _ship.Close();
                                 // _scan.Dispose();
-                                _ship = new EUShip(bcr, "S0001502548249652017");
+                                _ship = new EUShip(bcr, "S0001500000147412017");
                                 _ship.Show();
                             }
 

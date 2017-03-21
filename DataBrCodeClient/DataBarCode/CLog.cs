@@ -53,6 +53,29 @@ namespace DataBarCode
 
         }
 
+        public static int CleanScreenShoot()
+        {
+            int counterDel = 0;
+            //Тут будет чистка логов
+            foreach (var elem in Directory.GetFiles("Log"))
+            {
+                Debug.WriteLine(elem);
+                bool del = false;
+                if (elem.IndexOf(".bmp") != -1)
+                {
+                    del = true;
+                }
+                if (del)
+                {
+                    File.Delete(elem);
+                    counterDel++;
+                }
+            }
+            return counterDel;
+
+        }
+
+
         public static void WriteInfo(string Module, string Message)
         {
             ///Определяем дату и время

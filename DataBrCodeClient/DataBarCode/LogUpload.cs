@@ -127,5 +127,20 @@ namespace DataBarCode
 
             }
         }
+
+        private void buttonCleanScreen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Запустим удаленеи скриншотов
+                int counter = CLog.CleanScreenShoot();
+                MessageBox.Show("Delete: " + counter.ToString() + " ScreenShot", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
+            }
+
+        }
     }
 }

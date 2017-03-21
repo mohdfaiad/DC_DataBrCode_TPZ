@@ -47,7 +47,10 @@ namespace DataBarCode
 
             //Выгрузим подробную инфу по месту хранения 
             //labelMXMore.Text = getValueDataTableColumnRow(_TblWarehouse, "TEHUZ_LABEL", LabelPlace, "TEHUZ_NAME");
-            labelMXMore.Text = SqlLiteQuery.GetNameMX(LabelPlace);
+            if (LabelPlace == "MX0000")
+                labelMXMore.Text = "ТЭСА";
+            else
+                labelMXMore.Text = SqlLiteQuery.GetNameMX(LabelPlace);
 
 
 

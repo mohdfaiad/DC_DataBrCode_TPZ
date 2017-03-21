@@ -64,14 +64,14 @@
             // 
             // textBoxFOK
             // 
-            this.textBoxFOK.Location = new System.Drawing.Point(57, 25);
+            this.textBoxFOK.Location = new System.Drawing.Point(68, 25);
             this.textBoxFOK.Name = "textBoxFOK";
             this.textBoxFOK.Size = new System.Drawing.Size(144, 23);
             this.textBoxFOK.TabIndex = 36;
             // 
             // textBoxSAP
             // 
-            this.textBoxSAP.Location = new System.Drawing.Point(57, 50);
+            this.textBoxSAP.Location = new System.Drawing.Point(68, 50);
             this.textBoxSAP.Name = "textBoxSAP";
             this.textBoxSAP.Size = new System.Drawing.Size(144, 23);
             this.textBoxSAP.TabIndex = 35;
@@ -80,10 +80,10 @@
             // 
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 28);
+            this.label4.Location = new System.Drawing.Point(-1, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 21);
-            this.label4.Text = "ФОК";
+            this.label4.Size = new System.Drawing.Size(66, 21);
+            this.label4.Text = "Партия";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
@@ -120,7 +120,7 @@
             // 
             this.dataGridTextBoxColumn1.Format = "";
             this.dataGridTextBoxColumn1.FormatInfo = null;
-            this.dataGridTextBoxColumn1.HeaderText = "ФОК";
+            this.dataGridTextBoxColumn1.HeaderText = "Партия";
             this.dataGridTextBoxColumn1.MappingName = "RPRT_NOM";
             this.dataGridTextBoxColumn1.NullText = "-";
             this.dataGridTextBoxColumn1.Width = 90;

@@ -95,9 +95,9 @@ namespace DataBarCode
             }));
 
 
-            buttonUpdate.BeginInvoke(new Action(() =>
+            buttonPushUE.BeginInvoke(new Action(() =>
             {
-                buttonUpdate.Enabled = enable;
+                buttonPushUE.Enabled = enable;
             }));
 
 
@@ -748,6 +748,11 @@ namespace DataBarCode
             BufferToBD.StopReadBuffer();
 
             CLog.WriteInfo("StartMenu.cs", "Close UI Form");
+
+        }
+
+        private void buttonPushUE_Click(object sender, EventArgs e)
+        {
 
         }
 
