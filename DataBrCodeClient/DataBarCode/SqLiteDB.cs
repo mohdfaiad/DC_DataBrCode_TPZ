@@ -656,6 +656,7 @@ namespace DataBarCode
         public static Double GetWEIGHTByRZDN(string RZDN)
         {
             string R = "Нет данных";
+            Double RScan = 0;
             Double RD = 0;
             using (SQLiteConnection connection = new SQLiteConnection())
             {
@@ -671,6 +672,12 @@ namespace DataBarCode
                 while (reader.Read())
                 {
                     R = _getReaderByName(reader, "TASK_WEIGHT");
+                    try
+                    {
+                        RScan += Double.Parse(_getReaderByName(reader, "SUM_RELMUCH_VES"));
+                    }
+
+                    catch (Exception) { }
                 }
                 reader.Close();
                 connection.Close();
@@ -684,6 +691,7 @@ namespace DataBarCode
             {
                 RD = Double.Parse(R);
                 // RD = RD / 1000;
+                RD = RD - RScan;
             }
 
             catch (Exception)

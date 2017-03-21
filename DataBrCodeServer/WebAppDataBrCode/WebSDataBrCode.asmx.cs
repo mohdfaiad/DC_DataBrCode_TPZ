@@ -628,7 +628,8 @@ namespace WebAppDataBrCode
                                 [TASK_STANDART_MARKA] char(20),
                                 [OPER_TYPE_ID] char(20),
                                 [OPER_MASTER_NAME] char(20),
-                                [TASK_WEIGHT] char(20));";
+                                [TASK_WEIGHT] char(20),
+                                [SUM_RELMUCH_VES] char(20));";
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }
@@ -1086,7 +1087,7 @@ RELMUCH_PRM	258552982
 
                 while (reader.Read())
                 {
-                    using (SQLiteCommand insert = new SQLiteCommand("insert into TaskList(ROWNUM, RZDN_PRM, RZDN_DATE,ZDN_NUM, ZDN_PRM , DOC_BC , TS_NUM , RZDN_STATUS, TASK_THICKNESS, TASK_WIDTH,  TASK_MARKA, TASK_STANDART_MARKA, OPER_TYPE_ID, OPER_MASTER_NAME, TASK_WEIGHT ) values(@ROWNUM, @RZDN_PRM, @RZDN_DATE, @ZDN_NUM, @ZDN_PRM, @DOC_BC, @TS_NUM, @RZDN_STATUS, @TASK_THICKNESS, @TASK_WIDTH, @TASK_MARKA, @TASK_STANDART_MARKA, @OPER_TYPE_ID, @OPER_MASTER_NAME, @TASK_WEIGHT)", connection))
+                    using (SQLiteCommand insert = new SQLiteCommand("insert into TaskList(ROWNUM, RZDN_PRM, RZDN_DATE,ZDN_NUM, ZDN_PRM , DOC_BC , TS_NUM , RZDN_STATUS, TASK_THICKNESS, TASK_WIDTH,  TASK_MARKA, TASK_STANDART_MARKA, OPER_TYPE_ID, OPER_MASTER_NAME, TASK_WEIGHT, SUM_RELMUCH_VES) values(@ROWNUM, @RZDN_PRM, @RZDN_DATE, @ZDN_NUM, @ZDN_PRM, @DOC_BC, @TS_NUM, @RZDN_STATUS, @TASK_THICKNESS, @TASK_WIDTH, @TASK_MARKA, @TASK_STANDART_MARKA, @OPER_TYPE_ID, @OPER_MASTER_NAME, @TASK_WEIGHT, @SUM_RELMUCH_VES)", connection))
                     {
                         /*
                          *                     command.CommandText = @"CREATE TABLE [] (
@@ -1119,7 +1120,7 @@ RELMUCH_PRM	258552982
                         insert.Parameters.AddWithValue("@OPER_TYPE_ID", _getOracleByName(reader, "OPER_TYPE_ID"));
                         insert.Parameters.AddWithValue("@OPER_MASTER_NAME", _getOracleByName(reader, "OPER_MASTER_NAME"));
                         insert.Parameters.AddWithValue("@TASK_WEIGHT", _getOracleByName(reader, "TASK_WEIGHT")); //TASK_WEIGHT	24,4
-
+                        insert.Parameters.AddWithValue("@SUM_RELMUCH_VES", _getOracleByName(reader, "SUM_RELMUCH_VES")); //TASK_WEIGHT	24,4
                         insert.Transaction = liteTransaction;
                         insert.ExecuteNonQuery();
                     }
