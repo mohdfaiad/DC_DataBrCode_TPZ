@@ -28,7 +28,7 @@ namespace DataBarCode
 
             else if (e.KeyCode == Keys.F16)
             {
-                bool rezult = ScreenShot.MakeShot("StartMenu");
+                bool rezult = ScreenShot.MakeShot("EUSearch_UGP");
                 if (rezult)
                     MessageBox.Show("Снимок успешно сохранен", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
                 else

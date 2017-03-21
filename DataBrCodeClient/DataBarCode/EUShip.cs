@@ -475,7 +475,7 @@ namespace DataBarCode
 
             else if (e.KeyCode == Keys.F16)
             {
-                bool rezult = ScreenShot.MakeShot("StartMenu");
+                bool rezult = ScreenShot.MakeShot("EUShip");
                 if (rezult)
                     MessageBox.Show("Снимок успешно сохранен", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
                 else
