@@ -33,7 +33,6 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.labelBD = new System.Windows.Forms.Label();
             this.buttonNext = new System.Windows.Forms.Button();
-            this.labelMX = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonEUSearch = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer();
@@ -68,16 +67,6 @@
             this.buttonNext.Text = "Подтвердить";
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click_1);
             // 
-            // labelMX
-            // 
-            this.labelMX.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
-            this.labelMX.ForeColor = System.Drawing.Color.Tomato;
-            this.labelMX.Location = new System.Drawing.Point(0, 2);
-            this.labelMX.Name = "labelMX";
-            this.labelMX.Size = new System.Drawing.Size(209, 21);
-            this.labelMX.Text = "Очередь ЕУ для";
-            this.labelMX.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -109,10 +98,10 @@
             this.dataGridEu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridEu.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular);
             this.dataGridEu.GridLineColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridEu.Location = new System.Drawing.Point(4, 52);
+            this.dataGridEu.Location = new System.Drawing.Point(4, 26);
             this.dataGridEu.Name = "dataGridEu";
             this.dataGridEu.RowHeadersVisible = false;
-            this.dataGridEu.Size = new System.Drawing.Size(230, 191);
+            this.dataGridEu.Size = new System.Drawing.Size(230, 217);
             this.dataGridEu.TabIndex = 64;
             this.dataGridEu.TableStyles.Add(this.dataGridTableStyle1);
             // 
@@ -173,9 +162,9 @@
             // labelDetal
             // 
             this.labelDetal.ForeColor = System.Drawing.Color.White;
-            this.labelDetal.Location = new System.Drawing.Point(4, 26);
+            this.labelDetal.Location = new System.Drawing.Point(4, 0);
             this.labelDetal.Name = "labelDetal";
-            this.labelDetal.Size = new System.Drawing.Size(230, 23);
+            this.labelDetal.Size = new System.Drawing.Size(208, 23);
             this.labelDetal.Text = "Марка: Тест, Размер: Тест";
             // 
             // QueueTaskEU
@@ -191,7 +180,6 @@
             this.Controls.Add(this.buttonEUSearch);
             this.Controls.Add(this.labelBD);
             this.Controls.Add(this.buttonNext);
-            this.Controls.Add(this.labelMX);
             this.Controls.Add(this.pictureBox1);
             this.Name = "QueueTaskEU";
             this.Text = "Очередь ЕУ";
@@ -205,7 +193,6 @@
 
         private System.Windows.Forms.Label labelBD;
         private System.Windows.Forms.Button buttonNext;
-        private System.Windows.Forms.Label labelMX;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonEUSearch;
         private System.Windows.Forms.Timer timer1;

@@ -55,14 +55,6 @@ namespace DataBarCode
           //  labelMX.Text += " " + this.RZDN;
 
             ScanWeigth = SqlLiteQuery.GetWEIGHTByRZDN(_RZDN);
-            labelMX.Text = "Осталось: " + Math.Round(ScanWeigth, 2).ToString() + " т.";
-
-            if (ScanWeigth <= 0)
-                labelMX.ForeColor = Color.White;
-            else
-                labelMX.ForeColor = Color.Tomato;
-
-
             details = SqlLiteQuery.GetDetalisbyRZDN(_RZDN);
             MarkaRZDN = SqlLiteQuery.GetMarkabyRZDN(_RZDN);
             labelDetal.Text = details;
@@ -274,20 +266,6 @@ namespace DataBarCode
                 {
                     dataGridEu.DataSource = _tblEU;
                 }));
-
-
-                labelMX.BeginInvoke(new Action(() =>
-                {
-                    //Вычитаем и обновляем тонны
-                    labelMX.Text = "Осталось: " + Math.Round(ScanWeigth, 2).ToString() + " т.";
-                    if (ScanWeigth <= 0)
-                        labelMX.ForeColor = Color.White;
-                    else
-                        labelMX.ForeColor = Color.Tomato;
-                }));
-
-
-
             }
             catch (Exception exp)
             {
@@ -389,19 +367,18 @@ namespace DataBarCode
                         }));
                         OpenNETCF.Media.SystemSounds.Beep.Play();
 
-                        labelMX.BeginInvoke(new Action(() =>
-                        {
-                            //Вычитаем и обновляем тонны
-                            labelMX.Text = "Осталось: " + Math.Round(ScanWeigth, 2).ToString() + " т.";
-
-                            if (ScanWeigth <= 0)
-                                labelMX.ForeColor = Color.White;
-                            else
-                                labelMX.ForeColor = Color.Tomato;
-                        }));
-
                     }
                 }
+            }
+
+            else if (e.KeyCode == Keys.F16)
+            {
+                bool rezult = ScreenShot.MakeShot("QueueTaskEU");
+                if (rezult)
+                    MessageBox.Show("Снимок успешно сохранен", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
+                else
+                    MessageBox.Show("Ошибка сохранения", "ScreenShot", MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
+
             }
         }
 

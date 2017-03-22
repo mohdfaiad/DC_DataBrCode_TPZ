@@ -77,21 +77,21 @@ namespace DataBarCode
         private void buttonapr_Click(object sender, EventArgs e)
         {
 
-            if (_WareHousePost == null)
+            if (_queueT == null)
             {
-                _WareHousePost = new WarehousePost(bcr, "MX0462.4620001", ScanOperation);
-                _WareHousePost.Show();
+                _queueT = new QueueTask(bcr, ListScanOperation.TaskPGA);
+                _queueT.Show();
             }
 
             else
             {
-                if (_WareHousePost.FormActive) { }
+                if (_queueT.FormActive) { }
                 else
                 {
-                    _WareHousePost.Close();
+                    _queueT.Close();
                     // UIEU.Dispose();
-                    _WareHousePost = new WarehousePost(bcr, "MX0462.4620001", ScanOperation);
-                    _WareHousePost.Show();
+                    _queueT = new QueueTask(bcr, ListScanOperation.TaskPGA);
+                    _queueT.Show();
                 }
             }
 
