@@ -101,6 +101,12 @@
     <Compile Include="DataScales.Designer.cs">
       <DependentUpon>DataScales.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataScalesFixAndPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataScalesFixAndPost.Designer.cs">
+      <DependentUpon>DataScalesFixAndPost.cs</DependentUpon>
+    </Compile>
     <Compile Include="EUSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DataScales.resx">
       <DependentUpon>DataScales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataScalesFixAndPost.resx">
+      <DependentUpon>DataScalesFixAndPost.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="EUSearch.resx">

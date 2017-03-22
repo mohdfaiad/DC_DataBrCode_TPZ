@@ -28,9 +28,28 @@ namespace DataBarCode
         public string SETRZDN { get; set; }
         // public BarcodeReadEventHandler _returnFunc;
 
+
         public WarehousePost(Intermec.DataCollection.BarcodeReader _bcr, string LabelPlace, ListScanOperation _ScanOperation)
         {
             InitializeComponent();
+            InitForms(_bcr, LabelPlace, _ScanOperation);
+        }
+
+        public WarehousePost(Intermec.DataCollection.BarcodeReader _bcr, string LabelPlace, ListScanOperation _ScanOperation, string FixWeigth)
+        {
+            InitializeComponent();
+           // InitForms(_bcr, LabelPlace, _ScanOperation);
+            FormActive = true;
+            labelMXMore.Text = "Ст-1";
+            labelMX.Text = "Фикс. вес: " + FixWeigth;
+            InitTable();
+            this.KeyPreview = true;
+            labelCountScan.Text = "0";
+            listEU = new List<string>();
+        }
+        public void InitForms(Intermec.DataCollection.BarcodeReader _bcr, string LabelPlace, ListScanOperation _ScanOperation)
+        {
+
             FormActive = true;
             set = new Settings("DataBrCode.xml");
 
@@ -96,7 +115,6 @@ namespace DataBarCode
             }
             labelCountScan.Text = "0";
         }
-
 
         public void InitTable()
         {

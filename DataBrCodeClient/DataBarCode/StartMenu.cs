@@ -13,7 +13,7 @@ using System.Net;
 
 namespace DataBarCode
 {
-    public enum ListScanOperation { MXView, MXSet, EUShip, EUTaskMove, EuInAgr, TaskPGA, InventoryTask };
+    public enum ListScanOperation { MXView, MXSet, EUShip, EUTaskMove, EuInAgr, TaskPGA, InventoryTask, FixAndPost };
 
     public partial class StartMenu : Form
     {
@@ -753,7 +753,13 @@ namespace DataBarCode
 
         private void buttonPushUE_Click(object sender, EventArgs e)
         {
+            bcr.BarcodeRead -= new BarcodeReadEventHandler(bcr_BarcodeRead);
+            using (DataScalesFixAndPost _dtFP = new DataScalesFixAndPost())
+            {
+                _dtFP.ShowDialog();
+            }
 
+            bcr.BarcodeRead += new BarcodeReadEventHandler(bcr_BarcodeRead);
         }
 
 
