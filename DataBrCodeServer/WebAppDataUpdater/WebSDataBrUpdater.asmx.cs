@@ -20,8 +20,6 @@ namespace WebAppDataUpdater
     // [System.Web.Script.Services.ScriptService]
     public class WebSDataBrUpdater : System.Web.Services.WebService
     {
-
-
         public void AddAllLog(string _service, string _message)
         {
             SLogWeb.Add(new LogElem(_service, _message));
