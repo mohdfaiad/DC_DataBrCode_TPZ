@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
- 
+
 
 namespace DataBarCode
 {
@@ -23,7 +23,7 @@ namespace DataBarCode
     {
         public static void LedRedOn(int mmm)
         {
-             
+
         }
     }
 
@@ -61,6 +61,7 @@ namespace DataBarCode
 
             vib.SetLedStatus(1, OpenNETCF.WindowsCE.Notification.Led.LedState.Off);
         }
+
     }
 
     public static class ScreenShot
